@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSViaCEP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="nav-container">
+      <nav class="nav-main">
+        <h1>DSViaCEP</h1>
+        <div class="contact-link">CONTATO</div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="form-section" class="form-container">
+        <div class="card-form">
+          <form name="newAddress">
+          <div class="form-control">
+            <label for="cep">CEP:</label>
+            <input 
+            name="cep" 
+            id="cep" 
+            class="form-input"
+            type="text"
+            placeholder="CEP"
+            />
+
+              <div class="error-message" data-error="cep"></div>
+
+          </div>
+
+          <div class="form-control">
+            <label for="street">Logradouro:</label>
+            <input 
+            name="street" 
+            id="street" 
+            class="form-input"
+            type="text"
+            placeholder="LOGRADOURO"
+            disabled
+            />
+            
+          </div>
+
+          <div class="form-control">
+            <label for="number">Número:</label>
+            <input 
+            name="number" 
+            id="number" 
+            class="form-input"
+            type="text"
+            placeholder="NÚMERO"
+            />
+
+            <div class="error-message" data-error="number"></div>
+
+          </div>
+
+          <div class="form-control">
+            <label for="city">Cidade:</label>
+            <input 
+            name="city" 
+            id="city" 
+            class="form-input"
+            type="text"
+            placeholder="Cidade"
+            disabled
+            />
+          </div>
+
+          <div class="button-container">
+          <button name="buttonSave" class="button button-left" type="submit">Salvar</button>
+          <button name="buttonClear" class="button button-right">Limpar</button>
+        </div>
+
+    </form>
+    </div>
+    </section>
+      </section>
+
+      <section class="list-container" id="list-section">
+        <div class="card-list-item">
+          <h3>São Paulo</h3>
+          <p class="address-line">Rua dos Jardins,720</p>
+          <p class="address-cep">11200-345</p>
+        </div>
+      </section>
+    </main>
+
+    <section id="modal-contact" class="modal-container active">
+      <div class="modal-box">
+
+        <div class="modal-content">
+
+          <p>@julyano_costa</p>
+
+        </div>
+
+        <button id="modal-contact-close" class="button">Fechar</button>
+
+
+      </div>
+
+    </section>
+
+    <script type="module" src="js/dsviacep.js"></script>
+  </body>
+</html>
